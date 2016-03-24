@@ -25,8 +25,8 @@ def print_words():
                 my_d[ky] += 1
 
     for y in my_d:
-        print (y,'-',my_d[y])   # Вывод на экран
-
+        print '{0} - {1}'.format(y, my_d[y])
+        #print '%s - %d' % (y, my_d[y])    # Вывод на экран
     f.close()
     return
 
