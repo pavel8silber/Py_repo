@@ -8,8 +8,6 @@ def print_words():
     f.seek(0)
     str = f.read().decode('utf-8').split()     # decode string
 
-    print str[23]
-
     my_d = dict()                           # new dict
     my_set = set()                          # new set
 
@@ -28,7 +26,7 @@ def print_words():
 
     for y in my_d:
         print '{1} - {0}'.format(y.encode('utf-8'), my_d[y])
-        #print '%s - %d' % (y, my_d[y])    # Вывод на экран
+        # print '%s - %d' % (y, my_d[y])    # Вывод на экран
         # print 'test'
     f.close()
     return
