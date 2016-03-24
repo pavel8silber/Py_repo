@@ -6,7 +6,7 @@ def print_words():
     import string
     f = open('text.txt', 'r')       # чтение из текст файла
     f.seek(0)
-    str = f.read().split()
+    str = f.read().decode('utf-8').split()
 
     my_d = dict()
     my_set =set()
@@ -25,16 +25,11 @@ def print_words():
                 my_d[ky] += 1
 
     for y in my_d:
-        print '{0} - {1}'.format(y, my_d[y])
+        print '{0} - {1}'.format(y.encode('utf-8'), my_d[y])
         #print '%s - %d' % (y, my_d[y])    # Вывод на экран
     f.close()
     return
 
 
 print_words()
-
-
-
-
-
 
